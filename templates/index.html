@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction of US Dollar Price In future </title>
+  <style>
+    body {
+  background-image: url("https://media.gettyimages.com/photos/picture-of-pills-and-diabetic-supplies-picture-id172696996?s=2048x2048");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+    }
+    #bt:hover{
+      background-color: gold;
+    }
+    #bt{
+      width: 70px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    #pre:hover{
+      color: rgb(126, 39, 197);
+    }
+    #pre{
+      color: rgb(235, 17, 71);
+      font-size: 100px;
+    }
+    #text_1:hover{
+        color:rgb(54, 53, 53)
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <center>
+      <h1 style="color:rgb(253, 253, 252);">Prediction of Diabetes</h1><br>
+      <form method = "POST" action = "{{url_for('home')}}">
+        <b><input type="text" id="text_1" name = 'a' placeholder = "Pregnancies" required = "required" /><br><br>
+           <input type="text" id="text_2" name = 'b' placeholder = "Glucose" required = "required" /><br><br>
+           <input type="text" id="text_3" name = 'c' placeholder = "BloodPressure
+           " required = "required" /><br><br>
+           <input type="text" id="text_4" name = 'd' placeholder = "SkinThickness" required = "required" /><br><br>
+           <input type="text" id="text_5" name = 'e' placeholder = "Insulin" required = "required" /><br><br>
+           <input type="text" id="text_6" name = 'f' placeholder = "BMI" required = "required" /><br><br>
+           <input type="text" id="text_7" name = 'g' placeholder = "Age" required = "required" /><br><br>
+
+        <button type="submit" id="bt">Predict</button>
+      </form>
+    </center>
+    <br>
+    <center>
+        {%if answer == 1%}
+        <h1 id="pre">You have diabetes</h1>
+        {%elif answer == 0%}
+        <h1 id="pre">You Dont have diabetes</h1>
+        {%endif%}
+    </center>
+  </div>
+</body>
+</html>
